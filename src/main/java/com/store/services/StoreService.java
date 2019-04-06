@@ -17,14 +17,13 @@ public interface StoreService {
 	/**
 	 * Exclui uma loja
 	 * @param store
-	 * @return 
 	 */
 	void delete(Long id);
 	
 	/**
 	 * Atualiza uma loja
 	 * @param store
-	 * @return
+	 * @return Store
 	 */
 	Store update(Store store);
 	
