@@ -24,3 +24,9 @@ No Eclipse/STS, importe o projeto como projeto Maven.
 ### Documentação dos EndPoints 
   * Para acessar a documentação dos endpoints, execute a aplicação e acesse pelo navegador o endereço:   http://localhost:8080/swagger-ui.html
 
+### Não foi implementado por falta de tempo
+* Autenticação e autorização com Spring Security e tokens JWT (JSON Web Token)
+* Testes unitários e de integração com JUnit e Mockito
+* Banco H2 para realizar os testes
+* Caching com EhCache
+
