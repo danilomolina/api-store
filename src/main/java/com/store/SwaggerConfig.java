@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 	
 	@Bean
-	public Docket detalheApi() {
+	public Docket apiDetail() {
  
 		Docket docket = new Docket(DocumentationType.SWAGGER_2);
  
@@ -24,12 +24,12 @@ public class SwaggerConfig {
 		.apis(RequestHandlerSelectors.basePackage("com.store"))
 		.paths(PathSelectors.any())
 		.build()
-		.apiInfo(this.informacoesApi().build());
+		.apiInfo(this.apiInformation().build());
  
 		return docket;
 	}
  
-	private ApiInfoBuilder informacoesApi() {
+	private ApiInfoBuilder apiInformation() {
  
 		ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
  
