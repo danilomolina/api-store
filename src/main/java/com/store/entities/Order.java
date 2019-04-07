@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,8 +23,6 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * Entity order
  * @author Danilo Molina
@@ -32,10 +31,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_order")
-@JsonIgnoreProperties(
-        value = {"createdAt", "updatedAt"},
-        allowGetters = true
-)
 public class Order implements Serializable{
 	
 	/**
@@ -62,7 +57,7 @@ public class Order implements Serializable{
 	@JoinColumn(name = "order_id")
 	private List<OrderItem> itens;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "store_id")
 	private Store store;
 	

@@ -27,10 +27,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_store")
-@JsonIgnoreProperties(
+/*@JsonIgnoreProperties(
         value = {"createdAt", "updatedAt"},
         allowGetters = true
-)
+)*/
 public class Store implements Serializable{
 
 	/**

@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.store.entities.OrderItem;
 import com.store.repositories.OrderItemRepository;
+import com.store.services.OrderItemService;
 
 
 @Service
-public class OrderItemServiceImpl {
+public class OrderItemServiceImpl implements OrderItemService{
 
 	@Autowired
 	OrderItemRepository repository;

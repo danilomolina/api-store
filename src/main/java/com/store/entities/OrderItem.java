@@ -17,8 +17,6 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 /**
  * Entity orderItem
  * @author Danilo Molina
@@ -27,10 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_order_item")
-@JsonIgnoreProperties(
-        value = {"createdAt", "updatedAt"},
-        allowGetters = true
-)
+
 public class OrderItem implements Serializable{
 	
 	/**

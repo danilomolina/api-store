@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 import com.store.entities.Order;
 import com.store.repositories.OrderRepository;
+import com.store.services.OrderService;
 
 
 @Service
-public class OrderServiceImpl {
+public class OrderServiceImpl implements OrderService{
 
 	@Autowired
 	OrderRepository repository;

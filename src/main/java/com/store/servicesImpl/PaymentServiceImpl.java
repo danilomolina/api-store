@@ -10,10 +10,11 @@ import com.store.entities.Payment;
 import com.store.services.PaymentService;
 
 @Service
-public class PaymentServiceImpl {
+public class PaymentServiceImpl implements PaymentService{
 	
 	@Autowired
 	PaymentService repository;
+	
 
 	public Payment save(Payment payment) {
 		return this.repository.save(payment);
